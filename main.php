@@ -1,13 +1,8 @@
 <?php
 
-require "./LanguageList.php";
+require "./LuckyNumbers.php";
 
-$language_list = language_list("clojure", "php");
+$lucky = new LuckyNumbers;
 
-$language_list = add_to_language_list($language_list, "java");
-
-$language_list = prune_language_list($language_list);
-
-$first = current_language($language_list);
-
-var_dump($language_list, $first, language_list_length($language_list));
+var_dump($lucky->sumUp([1, 2, 3], [0, 7]));
+var_dump(intval("asdasd"));
